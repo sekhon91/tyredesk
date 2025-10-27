@@ -1,0 +1,34 @@
+{
+  "name": "buildease",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "build:mobile": "NUXT_AUTH_MODE=token nuxt build && npx cap copy && npx cap sync",
+    "device:open": "npx cap open ios && npx cap open android",
+    "device:open:ios": "npx cap open ios",
+    "device:open:android": "npx cap open android",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/device": "^7.0.2",
+    "@capacitor/ios": "^7.4.3",
+    "@capacitor/preferences": "^7.0.2",
+    "@formkit/nuxt": "^1.6.9",
+    "@tailwindcss/vite": "^4.1.12",
+    "nuxt": "^4.0.3",
+    "nuxt-auth-sanctum": "^1.2.0",
+    "tailwindcss": "^4.1.12",
+    "vue": "^3.5.20",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "@hypernym/nuxt-gsap": "^2.4.3"
+  }
+}

@@ -1,0 +1,42 @@
+@layer base {
+  /* Font Size */
+  body {
+    @apply text-sm;
+    @apply text-app-black;
+    @apply leading-[1.6];
+    @apply font-sans font-normal;
+    @apply tracking-[-3%];
+  }
+
+  .caption {
+    @apply text-xs;
+    @apply leading-[1.6];
+  }
+
+  h1,
+  .h1 {
+    @apply text-2xl lg:text-4xl;
+    @apply leading-[1];
+    @apply font-semibold font-serif;
+  }
+
+  h2,
+  .h2 {
+    @apply text-xl lg:text-3xl;
+    @apply leading-[1];
+    @apply font-semibold font-serif;
+  }
+
+  h3,
+  .h3 {
+    @apply text-lg lg:text-2xl;
+    @apply leading-[1.2];
+    @apply font-semibold font-serif;
+  }
+
+  h4,
+  .h4 {
+    @apply text-base lg:text-md font-normal;
+    @apply leading-[1.2];
+  }
+}

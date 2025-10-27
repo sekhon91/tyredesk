@@ -1,0 +1,44 @@
+@layer components {
+  .formkit-form {
+    .formkit-outer {
+      @apply mb-10;
+    }
+
+    .formkit-input[type="text"],
+    .formkit-input[type="email"],
+    .formkit-input[type="number"],
+    .formkit-input[type="password"] {
+      @apply px-[0.8rem];
+      @apply py-[0.8rem];
+      @apply z-[2];
+      @apply rounded-[5px];
+      @apply w-full;
+      @apply leading-[1.92rem];
+      @apply appearance-none;
+      @apply relative;
+      @apply bg-light-gray;
+      @apply mb-2;
+
+      &::placeholder {
+        @apply text-app-gray;
+      }
+      &:focus {
+        @apply border border-app-black;
+        @apply outline-none;
+      }
+
+      .formkit-input {
+        @apply mb-2;
+      }
+    }
+  }
+
+  .formkit-messages {
+    @apply w-full text-left;
+    li {
+      @apply w-full;
+      @apply text-red-400/90;
+      @apply mb-2;
+    }
+  }
+}

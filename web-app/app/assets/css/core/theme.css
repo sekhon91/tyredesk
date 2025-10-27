@@ -1,0 +1,30 @@
+/*
+  * Theme CSS file for the Tailwind CSS framework.
+*/
+
+@theme {
+  /* Colors */
+  /* --color-white: "#FFFFFF"; */
+  --color-light-gray: #f5f5f7;
+  --color-app-gray: #b3b3b3;
+  --color-dark-gray: #717182;
+  --color-app-black: #0a0a0a;
+
+  /* Font Families */
+  --font-sans: "Roboto", sans-serif;
+  --font-serif: "Roboto", sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 1.2rem;
+  --text-sm: 1.4rem;
+  --text-base: 1.6rem;
+  --text-md: 2.1rem;
+  --text-lg: 2.8rem;
+  --text-xl: 3.2rem;
+  --text-2xl: 4rem;
+  --text-3xl: 6.4rem;
+  --text-4xl: 7.6rem;
+
+  /* Spacing */
+  --spacing: 0.2rem;
+}

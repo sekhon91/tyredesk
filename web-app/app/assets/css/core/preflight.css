@@ -1,0 +1,33 @@
+@layer base {
+  html {
+    font-size: 62.5%;
+    /*
+    scroll-behavior: smooth !important;
+    */
+  }
+
+  body {
+    @apply bg-light-gray;
+  }
+
+  a:hover {
+    transition: all 0.4s;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+    @apply bg-white;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white;
+    border-radius: 3px;
+  }
+}

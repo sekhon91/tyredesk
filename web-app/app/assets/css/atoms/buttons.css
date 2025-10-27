@@ -1,0 +1,60 @@
+@layer components {
+  .btn {
+    @apply inline-block;
+    @apply text-sm leading-[1.6] font-normal text-center;
+    @apply px-8 py-4;
+    @apply rounded-[5px];
+    @apply cursor-pointer;
+    @apply self-center;
+
+    /* Button Small */
+    &.btn--sm {
+      @apply px-6 py-2;
+    }
+
+    &.btn--tight {
+      @apply px-0;
+    }
+
+    /* Button Gold */
+    &.btn--black {
+      @apply bg-app-black text-white;
+      @apply border border-app-black;
+
+      &:disabled {
+        /* @apply bg-app-black/50 border-app-black/50; */
+        @apply bg-app-black/80;
+        @apply text-dark-gray;
+        @apply cursor-not-allowed;
+      }
+
+      &:disabled {
+        @apply bg-app-gray border-app-gray;
+        @apply text-white;
+        @apply cursor-not-allowed;
+      }
+
+      /* Button Outline */
+      &.btn--outline {
+        @apply bg-transparent text-app-black;
+        @apply border border-app-black;
+
+        &:hover {
+          @apply bg-app-black/80;
+          @apply border-app-black/80;
+          @apply text-light-gray;
+        }
+
+        &:active {
+          @apply bg-app-black;
+        }
+
+        &:disabled {
+          @apply bg-app-gray border-app-gray;
+          @apply text-white;
+          @apply cursor-not-allowed;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+#### RULES DOCS ######
+# Available Rules: https://github.com/larastan/larastan/blob/3.x/docs/rules.md
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 10 is the highest level
+    level: 7
+
+    # This rule checks every argument of a method or a function, and if the argument has the type model-property, 
+    # it will try to check the given value against the model properties. 
+    # And if the model does not have the given property, it'll produce an error.
+    checkModelProperties: true
+
+    ignoreErrors:
+        - '#uses generic trait .*HasFactory but does not specify its types#'
+        # - '#return type with generic class .*BelongsTo does not specify its types#'
+        # - '#return type with generic class .*HasMany does not specify its types#'
+#
+    excludePaths:
+      - app/Http/Resources/*
+#        - ./*/*/FileToBeExcluded.php

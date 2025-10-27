@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">buildease</string>
+    <string name="title_activity_main">buildease</string>
+    <string name="package_name">uk.co.buildease.app</string>
+    <string name="custom_url_scheme">uk.co.buildease.app</string>
+</resources>

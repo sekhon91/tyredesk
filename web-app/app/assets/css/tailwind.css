@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/** Theme setup and p[reflight setup  */
+@import "./core/preflight.css";
+@import "./core/theme.css";
+
+/** Utility classes */
+@import "./core/utilities.css";
+
+/** 
+ * Core styles 
+*/
+@import "./core/typography.css";
+
+/*Atoms */
+@import "./atoms/buttons.css";
+@import "./atoms/formkit.css";

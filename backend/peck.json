@@ -1,0 +1,17 @@
+{
+    "preset": "laravel",
+    "check-comments": true,
+    "check-docblocks": true,
+    "ignore": {
+        "words": [
+            "php",
+            "favicon",
+            "js",
+            "filesystems",
+            "SUPERADMIN",
+            "cors",
+            "MANAGEUSERS"
+        ],
+        "paths": ["vendor", "node_modules", "public", "storage"]
+    }
+}
