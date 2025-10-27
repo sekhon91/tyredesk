@@ -32,19 +32,15 @@ export default defineNuxtConfig({
   /** Sanctum */
   sanctum: {
     baseUrl:
-      process.env.NUXT_AUTH_MODE === "token"
+      process.env.NUXT_APP_PLATFORM === "app"
         ? process.env.NUXT_MOBILE_API_BASE
         : process.env.NUXT_API_BASE,
-    mode: process.env.NUXT_AUTH_MODE == "token" ? "token" : "cookie",
+    mode: process.env.NUXT_APP_PLATFORM == "app" ? "token" : "cookie",
     redirectIfAuthenticated: true,
     redirectIfUnauthenticated: true,
     endpoints: {
-      login:
-        process.env.NUXT_AUTH_MODE === "token"
-          ? "/app-otp-verification"
-          : "/web-otp-verification",
-      logout:
-        process.env.NUXT_AUTH_MODE === "token" ? "/app-logout" : "/web-logout",
+      login: "/login",
+      logout: "/logout",
       user: "/user",
     },
     redirect: {
@@ -57,5 +53,9 @@ export default defineNuxtConfig({
   /** Run time configs */
   runtimeConfig: {
     authMode: process.env.AUTH_MODE || "token",
+    platform: process.env.NUXT_APP_PLATFORM || "web",
+    public: {
+      platform: process.env.NUXT_APP_PLATFORM || "web",
+    },
   },
 });

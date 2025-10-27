@@ -91,7 +91,9 @@ const loginForm = reactive({
   formData: <any>null,
   formSubmitted: <boolean>false,
 });
-
+//@ts-ignore
+const config = useRuntimeConfig();
+//@ts-ignore
 const client = useSanctumClient();
 const loginHandler = async (formData: any) => {
   try {
@@ -99,8 +101,11 @@ const loginHandler = async (formData: any) => {
     loginForm.errors = [];
     loginForm.formData = formData;
 
+    /** Set Platform */
+    formData.platform = config.public.platform;
+
     /** Login request */
-    await client("/login", {
+    await client("/login-otp", {
       method: "POST",
       body: formData,
     });
@@ -137,6 +142,7 @@ const otpHandler = async (formData: any) => {
     const res = await login({
       email: loginForm.formData.email || "",
       otp: formData.otp,
+      platform: config.public.platform,
     });
   } catch (error: any) {
     if (
