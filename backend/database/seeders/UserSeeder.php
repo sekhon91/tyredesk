@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
     /** Create Super Admin */
     $superAdmin = User::factory()->create([
       'name' => 'Harpreet Sekhon',
-      'email' => 'harpree@createinc.co.uk',
+      'email' => 'harpreet@createinc.co.uk',
       'company_id' => $company->id,
     ]);
 
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
     ]);
 
     /** Assign Role */
-    $serviceAdmin->assignRole(RolesEnum::SERVICEMANAGER->value);
+    $serviceAdmin->assignRole(RolesEnum::COMPANYADMIN->value);
 
     /** 
      * Create Service Admin 

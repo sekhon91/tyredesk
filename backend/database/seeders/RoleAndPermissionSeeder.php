@@ -35,6 +35,7 @@ class RoleAndPermissionSeeder extends Seeder
     $jobsManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::JOBS_MANAGE->value]);
     $invoicesViewPermission = Permission::firstOrCreate(['name' => PermissionsEnum::INVOICES_VIEW->value]);
     $invoicesManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::INVOICES_MANAGE->value]);
+    $companyUsersManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::COMPANY_USERS_MANAGE->value]);
 
 
     /**
@@ -54,6 +55,7 @@ class RoleAndPermissionSeeder extends Seeder
       $jobsManagePermission,
       $invoicesViewPermission,
       $invoicesManagePermission,
+      $companyUsersManagePermission,
     ]);
 
     /* Service Manager */

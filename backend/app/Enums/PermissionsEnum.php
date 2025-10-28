@@ -14,6 +14,7 @@ enum PermissionsEnum: string
   case JOBS_MANAGE = 'jobs.manage';
   case INVOICES_VIEW = 'invoices.view';
   case INVOICES_MANAGE = 'invoices.manage';
+  case COMPANY_USERS_MANAGE = 'company-users.manage';
 
 
 
@@ -28,6 +29,7 @@ enum PermissionsEnum: string
       self::JOBS_MANAGE => 'Manage Jobs',
       self::INVOICES_VIEW => 'View Invoices',
       self::INVOICES_MANAGE => 'Manage Invoices',
+      self::COMPANY_USERS_MANAGE => 'Manage Company Users',
     };
   }
 }
