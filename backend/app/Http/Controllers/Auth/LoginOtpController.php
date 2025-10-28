@@ -23,7 +23,7 @@ class LoginOtpController extends Controller
 
     $user = User::where('email', $credentials['email'])->first();
 
-    /** 
+    /**
      * If user not found throw error
      */
     if (!$user) {

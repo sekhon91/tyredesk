@@ -16,11 +16,11 @@ Route::post('/login', LoginController::class)->name('login');
  */
 Route::middleware(['auth:sanctum', 'verified'])->group(function (): void {
 
-  /**
-   * Logout Routes
-   */
-  Route::post('/logout', LogoutController::class)->name('logout');
+    /**
+     * Logout Routes
+     */
+    Route::post('/logout', LogoutController::class)->name('logout');
 
-  Route::get('/user', fn(Request $request) => response()->json($request->user()))->middleware('auth:sanctum');
+    Route::get('/user', fn (Request $request) => response()->json($request->user()))->middleware('auth:sanctum');
 
 });

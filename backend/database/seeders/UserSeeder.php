@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Company;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -13,13 +13,12 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $hash = Hash::make('password');
+        $company = Company::factory()->create([
+            'name' => 'Create Inc',
+        ]);
 
-        $user = User::create([
-            'name' => 'Harpreet Sekhon',
-            'email' => 'harpreet@createinc.co.uk',
-            'password' => $hash,
-            'email_verified_at' => now(),
+        $user = User::factory()->superAdmin()->create([
+            'company_id' => $company->id,
         ]);
 
         /** Assign Role */

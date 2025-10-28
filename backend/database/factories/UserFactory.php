@@ -41,4 +41,16 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * Create a super admin user with Create Inc company.
+     */
+    public function superAdmin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'name' => 'Harpreet Sekhon',
+            'email' => 'harpreet@createinc.co.uk',
+            'email_verified_at' => now(),
+        ]);
+    }
 }

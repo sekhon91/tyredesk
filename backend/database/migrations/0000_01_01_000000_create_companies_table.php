@@ -6,17 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
     {
-        Schema::create('one_time_passwords', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->id();
-
-            $table->string('password');
-            $table->json('origin_properties')->nullable();
-
-            $table->dateTime('expires_at');
-            $table->morphs('authenticatable');
-
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('one_time_passwords');
+        Schema::dropIfExists('companies');
     }
 };
