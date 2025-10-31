@@ -35,6 +35,8 @@ class RoleAndPermissionSeeder extends Seeder
     $jobsManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::JOBS_MANAGE->value]);
     $invoicesViewPermission = Permission::firstOrCreate(['name' => PermissionsEnum::INVOICES_VIEW->value]);
     $invoicesManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::INVOICES_MANAGE->value]);
+    $vehiclesViewPermission = Permission::firstOrCreate(['name' => PermissionsEnum::VEHICLES_VIEW->value]);
+    $vehiclesManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::VEHICLES_MANAGE->value]);
     $companyUsersManagePermission = Permission::firstOrCreate(['name' => PermissionsEnum::COMPANY_USERS_MANAGE->value]);
 
 
@@ -55,6 +57,8 @@ class RoleAndPermissionSeeder extends Seeder
       $jobsManagePermission,
       $invoicesViewPermission,
       $invoicesManagePermission,
+      $vehiclesViewPermission,
+      $vehiclesManagePermission,
       $companyUsersManagePermission,
     ]);
 
@@ -64,6 +68,8 @@ class RoleAndPermissionSeeder extends Seeder
       $clientsManagePermission,
       $jobsViewPermission,
       $jobsManagePermission,
+      $vehiclesViewPermission,
+      $vehiclesManagePermission,
     ]);
 
     /* Technician */

@@ -102,7 +102,7 @@ class ClientController extends Controller
     $client->update($request->validated());
 
     /** Return Client */
-    return new ClientCollectionResource($client);
+    return new ClientSingleResource($client);
   }
 
   /**

@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Company\CompanyUserController;
+use App\Http\Controllers\Vehicle\VehicleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,5 +37,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (): void {
    * Client Routes
    */
   Route::apiResource('/clients', ClientController::class);
+
+  /**
+   * Vehicle Routes
+   */
+  Route::apiResource('/vehicles', VehicleController::class);
 
 });
