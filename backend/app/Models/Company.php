@@ -8,20 +8,36 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Company extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     */
-    protected $fillable = [
-        'name',
-    ];
+  /**
+   * The attributes that are mass assignable.
+   */
+  protected $fillable = [
+    'name',
+  ];
 
-    /**
-     * Get the users for the company.
-     */
-    public function users(): HasMany
-    {
-        return $this->hasMany(User::class);
-    }
+  /**
+   * Get the users for the company.
+   */
+  public function users(): HasMany
+  {
+    return $this->hasMany(User::class);
+  }
+
+  /**
+   * Get the clients for the company.
+   */
+  public function clients(): HasMany
+  {
+    return $this->hasMany(Client::class);
+  }
+
+  /**
+   * Get the vehicles for the company.
+   */
+  public function vehicles(): HasMany
+  {
+    return $this->hasMany(Vehicle::class);
+  }
 }
