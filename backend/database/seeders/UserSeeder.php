@@ -80,5 +80,22 @@ class UserSeeder extends Seeder
 
     /** Assign Role */
     $billingAdmin->assignRole(RolesEnum::BILLINGADMIN->value);
+
+
+    /**
+     * Create 10 random companies
+     */
+
+    $companies = Company::factory()->count(10)->create();
+
+    foreach ($companies as $company) {
+      $user = User::factory()
+        ->create([
+          'company_id' => $company->id,
+        ]);
+
+      /** Assign Company Admin Role */
+      $user->assignRole(RolesEnum::COMPANYADMIN->value);
+    }
   }
 }
