@@ -14,9 +14,7 @@ class UserSeeder extends Seeder
    */
   public function run(): void
   {
-    $company = Company::factory()->create([
-      'name' => 'Create Inc',
-    ]);
+    $company = Company::find(1);
 
     /** Create Super Admin */
     $superAdmin = User::factory()->create([
@@ -86,7 +84,7 @@ class UserSeeder extends Seeder
      * Create 10 random companies
      */
 
-    $companies = Company::factory()->count(10)->create();
+    $companies = Company::whereNot('id', 1)->get();
 
     foreach ($companies as $company) {
       $user = User::factory()
